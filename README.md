@@ -51,7 +51,7 @@ In the `mgen/` directory, we run the driver script `scripts/run.sh` with:
 
 ## References
 - [Genomes Download FAQ | 12. How can I download RefSeq data for all complete bacterial genomes?](http://www.ncbi.nlm.nih.gov/genome/doc/ftpfaq/#allcomplete)
- - Download the assembly summary file: i.e. ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/Mycoplasma_genitalium/assembly_summary.txt
+ - Using the assembly summary file: i.e. ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/Mycoplasma_genitalium/assembly_summary.txt
  - The field named "ftp_path" provides the path to the FTP directory containing the data for each assembly.
 
 - [SeqinR](http://pbil.univ-lyon1.fr/software/seqinr/home?lang=eng)

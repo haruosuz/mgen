@@ -21,4 +21,4 @@ Rscript --vanilla scripts/my_analysis.R
 
 uname -a
 
-echo "[$(date)] Thank you, come again."
+echo "[$(date)] Done"

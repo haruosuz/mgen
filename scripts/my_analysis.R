@@ -12,15 +12,15 @@ library(seqinr)
 lnt <- read.fasta(file = "data/GCA_000027325.1_ASM2732v1_genomic.fna.gz")
 laa <- read.fasta(file = "data/GCA_000027325.1_ASM2732v1_protein.faa.gz", seqtype = c("AA") )
 
+# Writing sequence data out as a FASTA file
+write.fasta(sequences=lnt, names=getAnnot(lnt), file.out="analysis/sequence.fasta", nbchar=70)
+
 cat("# How many sequences\n")
 length(lnt)
 length(laa)
 
-# The first element of the R list object `lnt` contains the DNA sequence.
+# Access the first element of the list
 nt <- lnt[[1]]
-
-# Writing sequence data out as a FASTA file
-write.fasta(sequences=nt, names=getName(nt), file.out="analysis/sequence.fasta", nbchar=70)
 
 cat("# Length of a DNA sequence\n")
 length(nt)

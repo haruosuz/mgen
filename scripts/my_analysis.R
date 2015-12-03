@@ -49,7 +49,7 @@ rollapply(data = d, width = 100000, by = 100000, FUN = GC)
 windowsize <- 10000
 x <- seq(from = 1, to = length(d)-windowsize, by = windowsize)
 y <- rollapply(data = d, width = windowsize, by = windowsize, FUN = GC)
-pdf(file="analysis/plot_GCwin.pdf")
+pdf(file="analysis/plot.pdf")
 plot(x, y, type="l", xlab="Position (bp)", ylab="GC content")
 dev.off()
 

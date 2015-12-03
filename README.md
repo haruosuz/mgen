@@ -42,17 +42,16 @@ In the `mgen/` directory, we run the driver script `scripts/run.sh` with:
     cd data/
     ls -lh
 
-    # Working with Gzipped Compressed Files using zgrep, gzcat, zdiff, zless
+    # Working with Gzipped Compressed Files using gzcat, zgrep, zdiff, zless
     gzcat *.fna.gz | head -n 2
-    zgrep '^>' *.faa.gz | tail -n 2
     zgrep -c '^>' *.gz
-    zgrep --color -n "ATGATGATG" *.fna.gz
-    zless *.fna.gz
+    zless *.faa.gz
 
 ----------
 
 ## References
 - [ncbi_ftp_download](https://github.com/aleimba/bac-genomics-scripts/tree/master/ncbi_ftp_download) 
+- [Genomes Download FAQ | 12. How can I download RefSeq data for all complete bacterial genomes?](http://www.ncbi.nlm.nih.gov/genome/doc/ftpfaq/#allcomplete)
 
 - [SeqinR](http://pbil.univ-lyon1.fr/software/seqinr/home?lang=eng)
  - [Using the R SeqinR package](http://davetang.org/muse/2013/05/09/using-the-r-seqinr-package/)

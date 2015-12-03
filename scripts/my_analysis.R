@@ -39,7 +39,8 @@ cat("# Dinucleotide counts\n")
 #count(s2c("atg"), 2) # "at" and "tg"
 count(nt, 2)
 # http://www.ncbi.nlm.nih.gov/pmc/articles/PMC17754/figure/F1/
-cat("# Dinucleotide relative abundances (Rho)\n"); rho(nt, 2)
+cat("# Dinucleotide relative abundances (Rho)\n")
+rho(nt, 2)
 
 cat("# Local variation in GC content\n")
 GC(nt[1:100000])

@@ -59,6 +59,10 @@ In the `mgen/` directory, we run the driver script `scripts/run.sh` with:
  - [Welcome to a Little Book of R for Bioinformatics!](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html)
  - [Applied Statistics for Bioinformatics using R](https://cran.r-project.org/doc/contrib/Krijnen-IntroBioInfStatistics.pdf)
 
-- [Trends Microbiol. 2001 Jul;9(7):335-43. Detecting anomalous gene clusters and pathogenicity islands in diverse bacterial genomes.](http://www.ncbi.nlm.nih.gov/pubmed/11435108)
+- Genomic nucleotide composition
+ - [Database of genomic compositional skews](http://www.g-language.org/data/oriter/)
+ - [Trends Microbiol. 2001 Jul;9(7):335-43. Detecting anomalous gene clusters and pathogenicity islands in diverse bacterial genomes.](http://www.ncbi.nlm.nih.gov/pubmed/11435108)
+ - [Genome Res. 2001 Apr;11(4):540-6. Genome-scale compositional comparisons in eukaryotes.](http://www.ncbi.nlm.nih.gov/pubmed/11282969) [Table 1](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC311039/table/T1/)
+ - [Proc Natl Acad Sci U S A. 1999 Aug 3;96(16):9184-9. Genome signature comparisons among prokaryote, plasmid, and mitochondrial DNA.](http://www.ncbi.nlm.nih.gov/pubmed/10430917) [Figure 1](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC17754/figure/F1/)
 
 ----------

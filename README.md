@@ -42,7 +42,7 @@ In the `mgen/` directory, we run the driver script `scripts/run.sh` with:
     cd data/
     ls -lh
 
-    # Working with Gzipped Compressed Files using gzcat, zgrep, zdiff, zless
+    # Working with Gzipped Compressed Files using gzcat, zgrep, and zless
     gzcat *.fna.gz | head -n 2
     zgrep -c '^>' *.gz
     zless *.faa.gz

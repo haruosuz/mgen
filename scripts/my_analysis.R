@@ -13,7 +13,7 @@ lnt <- read.fasta(file = "data/GCA_000027325.1_ASM2732v1_genomic.fna.gz")
 laa <- read.fasta(file = "data/GCA_000027325.1_ASM2732v1_protein.faa.gz", seqtype = c("AA") )
 
 # Writing sequence data out as a FASTA file
-write.fasta(sequences=lnt, names=getAnnot(lnt), file.out="analysis/sequence.fasta", nbchar=70)
+write.fasta(sequences=lnt, names=getName(lnt), file.out="analysis/sequence.fasta", nbchar=70)
 
 cat("# How many sequences\n")
 length(lnt)

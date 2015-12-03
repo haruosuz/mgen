@@ -7,17 +7,18 @@ mkdir -p ./{data,analysis/results-$(date +%F)}
 
 # Downloading data
 
-Genus_Species_Strain="Mycoplasma_genitalium_G37"
-wget -P data/ -nd -cNr -t 45 -A "*.faa,*.fna" "ftp://ftp.ncbi.nlm.nih.gov/genomes/Bacteria/${Genus_Species_Strain}*"
+URL=ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA_000027325.1_ASM2732v1/
+wget -P data/ $URL/{README.txt,md5checksums.txt,*.fna.gz,*.faa.gz}
+
+echo "MD5 Checksums"
+md5 data/*.gz
 
 # Running R scripts
 
-ACCESSION="NC_000908"
-Rscript --vanilla scripts/my_analysis.R $ACCESSION
+Rscript --vanilla scripts/my_analysis.R
 
 # Print operating system characteristics
 
 uname -a
 
 echo "[$(date)] Thank you, come again."
-

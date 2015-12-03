@@ -7,9 +7,9 @@
 library(seqinr)
 
 # Reading sequence data into R
-args <- commandArgs(trailingOnly = TRUE) # print(args)
-ld <- read.fasta(file = paste0("data/",args[1],".fna") )
-ld <- read.fasta(file = "data/NC_000908.fna") # mgen
+#args <- commandArgs(trailingOnly = TRUE) # print(args)
+#ld <- read.fasta(file = paste0("data/",args[1],".fna") )
+ld <- read.fasta(file = "data/GCA_000027325.1_ASM2732v1_genomic.fna.gz") # mgen
 d <- ld[[1]]
 
 cat("# Length of a DNA sequence\n")
@@ -25,7 +25,7 @@ cat("# GC Content of DNA\n")
 GC(d)
 
 # DNA words
-cat("# Dinucleotide count\n")
+cat("# Dinucleotide counts\n")
 #count(s2c("atg"), 2) # "at" and "tg"
 count(d, 2)
 

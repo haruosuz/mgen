@@ -19,10 +19,11 @@ A complete genome of *Mycoplasma genitalium* G37 was retrieved from the NCBI FTP
      analysis/: contains results of data analyses
 
 ## Data
-FASTA format sequences of Nucleic Acids (.fna) and Amino Acids (.faa) downloaded on 2015-11-15 from <ftp://ftp.ncbi.nlm.nih.gov/genomes/Bacteria/Mycoplasma_genitalium_G37_uid57707/> into `data/`:
+FASTA format sequences of Nucleic Acids (`GCA_000027325.1_ASM2732v1_genomic.fna.gz`) and Amino Acids (`GCA_000027325.1_ASM2732v1_protein.faa.gz`) downloaded on 2015-12-03 from <ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA_000027325.1_ASM2732v1/> into `data/`:
 
-	data/NC_000908.faa
-	data/NC_000908.fna
+	# MD5 Checksums
+	MD5 (data/GCA_000027325.1_ASM2732v1_genomic.fna.gz) = a3e6e5655e4996dc2d49f876be9d1c27
+	MD5 (data/GCA_000027325.1_ASM2732v1_protein.faa.gz) = c8b83afee0016c2884b7a88bc1a9ac33
 
 ## Scripts
 
@@ -38,27 +39,15 @@ In the `mgen/` directory, we run the driver script `scripts/run.sh` with:
 
 ## Inspecting Data
 
-Inspecting and Manipulating Text Data with Unix Tools
-
     cd data/
+    ls -lh
 
-    # `ls -lh` reports human-readable file sizes
-    ls -lh NC_000908.*
-
-    # Inspecting Data with Head and Tail
-    head -n 2 NC_000908.*
-    tail -n 2 NC_000908.*
-
-    # use `grep` to extract lines of a file that match a pattern
-    grep '^>' NC_000908.faa
-    # count how many lines match a pattern
-    grep -c '^>' NC_000908.*
-    # the matching part of a pattern is colored, using:
-    grep --color 'ATG' NC_000908.fna 
-
-    # To search text and highlights matches, open a file in `less`, and 
-    # then press / and enter text (e.g. "ATG"). To quit `less`, press q.
-    less NC_000908.fna
+    # Working with Gzipped Compressed Files using zgrep, gzcat, zdiff, zless
+    gzcat *.fna.gz | head -n 2
+    zgrep '^>' *.faa.gz | tail -n 2
+    zgrep -c '^>' *.gz
+    zgrep --color -n "ATGATGATG" *.fna.gz
+    zless *.fna.gz
 
 ----------
 

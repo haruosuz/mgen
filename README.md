@@ -1,14 +1,14 @@
 ----------
 
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2015-11-29  
+Last Update: 2015-12-03  
 
 ----------
 
 # *Mycoplasma genitalium* (mgen) Project
 Project started 2015-11-15.  
 
-A complete genome of *Mycoplasma genitalium* G37 was retrieved from the NCBI FTP site. I used R to assess genome features (length, base composition, GC content of the DNA sequence, and local variation in GC content), and obtained a 16S rRNA gene sequence of the genome.
+A complete genome of *Mycoplasma genitalium* G37 was retrieved from the NCBI FTP site. I used R to assess genome features (length, base composition, GC content of the DNA sequence, and local variation in GC content).
 
 ## Project directories
 
@@ -26,56 +26,13 @@ FASTA format sequences of Nucleic Acids (.fna) and Amino Acids (.faa) downloaded
 
 ## Scripts
 
-The shell script `scripts/run.sh` automatically carries out the entire steps: creating directories (`data/` and `analysis/`), downloading data files, and running the R script `scripts/my_analysis.R` that generates two output files (`analysis/plot.pdf` and `analysis/sequence.fasta`).
+The shell script `scripts/run.sh` automatically carries out the entire steps: creating subdirectories, downloading data files, and running the R script `scripts/my_analysis.R` that generates two output files (`analysis/plot.pdf` and `analysis/sequence.fasta`).
 
-## Run environment
+## Usage
 
-    $uname -a
-    Darwin localhost 13.4.0 Darwin Kernel Version 13.4.0: Wed Mar 18 16:20:14 PDT 2015; root:xnu-2422.115.14~1/RELEASE_X86_64 x86_64
-
-R
-
-    > sessionInfo()
-    R version 3.2.2 (2015-08-14)
-    Platform: x86_64-apple-darwin13.4.0 (64-bit)
-    Running under: OS X 10.9.5 (Mavericks)
-    
-    locale:
-    [1] C
-    
-    attached base packages:
-    [1] stats     graphics  grDevices utils     datasets  methods   base     
-    
-    other attached packages:
-    [1] seqinr_3.1-3 ade4_1.7-2  
-    
-----------
-
-## Steps
-
-You can run the shell script `scripts/run.sh` that carries out the entire steps (in the `mgen/` directory):
+In the `mgen/` directory, we run the driver script `scripts/run.sh` with:
 
     bash scripts/run.sh > stdout.txt 2> stderr.txt &
-
-#### Creating the project directory
-
-    mkdir -p mgen/{data,scripts,analysis}
-
-#### Downloading data
-
-    Genus_Species_Strain="Mycoplasma_genitalium_G37"
-    wget -b -P data/ -nd -cNr -t 45 -A "*.faa,*.fna" "ftp://ftp.ncbi.nlm.nih.gov/genomes/Bacteria/${Genus_Species_Strain}*"
-
-#### Running R Scripts
-
-You can run the R script `scripts/my_analysis.R` from R:
-
-    setwd("mgen/") # set the working directory
-    source("scripts/my_analysis.R") # execute the R script
-
-Alternatively, you can execute the R script in batch mode from the command line (in the `mgen/` directory):
-
-    Rscript --vanilla scripts/my_analysis.R
 
 ----------
 
@@ -107,6 +64,11 @@ Inspecting and Manipulating Text Data with Unix Tools
 
 ## References
 - [ncbi_ftp_download](https://github.com/aleimba/bac-genomics-scripts/tree/master/ncbi_ftp_download) 
+
+- [SeqinR](http://pbil.univ-lyon1.fr/software/seqinr/home?lang=eng)
+ - [Using the R SeqinR package](http://davetang.org/muse/2013/05/09/using-the-r-seqinr-package/)
+ - [Welcome to a Little Book of R for Bioinformatics!](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html)
+ - [Applied Statistics for Bioinformatics using R](https://cran.r-project.org/doc/contrib/Krijnen-IntroBioInfStatistics.pdf)
 
 - [Trends Microbiol. 2001 Jul;9(7):335-43. Detecting anomalous gene clusters and pathogenicity islands in diverse bacterial genomes.](http://www.ncbi.nlm.nih.gov/pubmed/11435108)
 

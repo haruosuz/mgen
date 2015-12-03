@@ -52,6 +52,7 @@ In the `mgen/` directory, we run the driver script `scripts/run.sh` with:
 ## References
 - [ncbi_ftp_download](https://github.com/aleimba/bac-genomics-scripts/tree/master/ncbi_ftp_download) 
 - [Genomes Download FAQ | 12. How can I download RefSeq data for all complete bacterial genomes?](http://www.ncbi.nlm.nih.gov/genome/doc/ftpfaq/#allcomplete)
+ - ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/Mycoplasma_genitalium/assembly_summary.txt
 
 - [SeqinR](http://pbil.univ-lyon1.fr/software/seqinr/home?lang=eng)
  - [Using the R SeqinR package](http://davetang.org/muse/2013/05/09/using-the-r-seqinr-package/)

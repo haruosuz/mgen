@@ -62,6 +62,6 @@ y <- rollapply(data = nt, width = windowsize, by = windowsize, FUN = GC)
 plot(x, y, type="l", xlab="Position (bp)", ylab="GC content")
 dev.off()
 
-# 
+# Print R version and packages
 sessionInfo()
 

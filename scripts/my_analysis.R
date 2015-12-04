@@ -6,18 +6,15 @@
 # Loading seqinr package
 library(seqinr)
 
-# Reading sequence data into R
-#args <- commandArgs(trailingOnly = TRUE) # print(args)
-#lnt <- read.fasta(file = paste0("data/",args[1],".fna") )
-lnt <- read.fasta(file = "data/GCA_000027325.1_ASM2732v1_genomic.fna.gz")
-laa <- read.fasta(file = "data/GCA_000027325.1_ASM2732v1_protein.faa.gz", seqtype = c("AA") )
+# List files in a directory
+files <- list.files(path="data", pattern="\\.gz", full.names=TRUE)
+lnt <- read.fasta(file = files[1]) # data/GCA_000027325.1_ASM2732v1_genomic.fna.gz
 
 # Writing sequence data out as a FASTA file
 write.fasta(sequences=lnt, names=getName(lnt), file.out="analysis/sequence.fasta", nbchar=70)
 
 cat("# How many sequences\n")
 length(lnt)
-length(laa)
 
 # Access the first element of the list
 nt <- lnt[[1]]

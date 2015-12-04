@@ -8,7 +8,7 @@ Last Update: 2015-12-03
 # *Mycoplasma genitalium* (mgen) Project
 Project started 2015-11-15.  
 
-A complete genome of *Mycoplasma genitalium* G37 was retrieved from the NCBI FTP site. I used R to assess genome features (length, base composition, GC content of the DNA sequence, and local variation in GC content).
+A complete genome of *Mycoplasma genitalium* G37 was retrieved from the NCBI FTP site. We use R to assess genome features (length, base composition, GC content of the DNA sequence, and local variation in GC content).
 
 ## Project directories
 

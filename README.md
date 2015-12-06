@@ -31,7 +31,7 @@ The shell script `scripts/run.sh` automatically carries out the entire steps: cr
 
 ## Usage
 
-In the `mgen/` directory, we run the driver script `scripts/run.sh` with:
+In the `mgen/` directory, we run the shell script `scripts/run.sh` with:
 
     bash scripts/run.sh > out.log 2>&1 &
 

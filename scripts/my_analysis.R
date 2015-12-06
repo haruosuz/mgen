@@ -8,6 +8,8 @@ library(seqinr)
 
 # List files in a directory
 files <- list.files(path="data", pattern="\\.gz", full.names=TRUE)
+
+# Reading sequence data into R
 lnt <- read.fasta(file = files[1]) # data/GCA_000027325.1_ASM2732v1_genomic.fna.gz
 
 # Writing sequence data out as a FASTA file
@@ -25,7 +27,6 @@ length(nt)
 cat("# Base composition of a DNA sequence\n")
 ( x <- table(nt) )
 x / sum(x)
-
 cat("# GC Content of DNA\n")
 (x["g"] + x["c"]) / sum(x)
 #GC(s2c("acgt")) # 0.5

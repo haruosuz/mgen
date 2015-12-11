@@ -2,7 +2,6 @@
 # Set Working Directory
 #setwd("~/projects/mgen/")
 
-#install.packages("seqinr")
 # Loading seqinr package
 library(seqinr)
 

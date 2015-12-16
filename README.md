@@ -33,12 +33,6 @@ The shell script `scripts/run.sh` automatically carries out the entire steps: cr
 
 In the `mgen/` directory, we run the shell script `scripts/run.sh` with:
 
-    bash scripts/run.sh
-
-    # To redirect standard output and standard error to separate files, use the `>` and `2>` operators.
-    bash scripts/run.sh > stdout.txt 2> stderr.txt &
-
-    # The `2>&1` operator redirects standard error to the standard output stream.
     bash scripts/run.sh > out.log 2>&1 &
 
 ----------

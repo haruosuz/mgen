@@ -1,7 +1,7 @@
 ----------
 
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2015-12-03  
+Last Update: 2015-12-16  
 
 ----------
 
@@ -14,8 +14,8 @@ A complete genome of *Mycoplasma genitalium* G37 was retrieved from the NCBI FTP
 
     mgen/
      README.md: project documentation 
-     data/: contains all raw and intermediate data
-     scripts/: contains general project-wide scripts
+     data/: contains sequence data in FASTA format
+     scripts/: contains R and Shell scripts
      analysis/: contains results of data analyses
 
 ## Data

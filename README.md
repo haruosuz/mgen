@@ -33,7 +33,7 @@ The shell script `scripts/run.sh` automatically carries out the entire steps: cr
 
 In the `mgen/` directory, we run the shell script `scripts/run.sh` with:
 
-    bash scripts/run.sh > out.log 2>&1 &
+    bash scripts/run.sh > log.txt 2>&1 &
 
 ----------
 

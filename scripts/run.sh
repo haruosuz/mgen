@@ -16,6 +16,7 @@ md5 data/*.gz
 # Running R scripts
 
 Rscript --vanilla scripts/my_analysis.R
+#Rscript --vanilla scripts/my_sliding_window.R
 
 # Print operating system characteristics
 

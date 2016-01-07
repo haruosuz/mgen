@@ -49,13 +49,13 @@ cat("# A sliding window analysis of GC content\n")
 rollapply(data = nt, width = 100000, by = 100000, FUN = GC)
 
 # A sliding window plot of GC content
-pdf(file="analysis/plot.pdf")
 windowsize <- 10000
-x <- seq(from = 1, to = length(nt)-windowsize, by = windowsize)
+x <- seq(from = 1, to = length(nt)-windowsize, by = windowsize) / 10^6
 y <- rollapply(data = nt, width = windowsize, by = windowsize, FUN = GC)
-plot(x, y, type="l", xlab="Position (bp)", ylab="GC content")
+pdf(file="analysis/plot.pdf")
+par(mfcol=c(1,1), cex=1.5, mai = c(1.2, 1.2, 0.1, 0.1)) # c(bottom, left, top, right)
+plot(x, y, type="l", xlab="Position (Mbp)", ylab="GC content")
 dev.off()
 
 # Print R version and packages
 sessionInfo()
-

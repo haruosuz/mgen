@@ -1,7 +1,7 @@
 ----------
 
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2015-12-16  
+Last Update: 2016-01-07  
 
 ----------
 
@@ -19,6 +19,7 @@ A complete genome of *Mycoplasma genitalium* G37 was retrieved from the NCBI FTP
      analysis/: contains results of data analyses
 
 ## Data
+
 FASTA format sequences of Nucleic Acids (`GCA_000027325.1_ASM2732v1_genomic.fna.gz`) and Amino Acids (`GCA_000027325.1_ASM2732v1_protein.faa.gz`) downloaded on 2015-12-03 from <ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA_000027325.1_ASM2732v1/> into `data/`:
 
 	# MD5 Checksums
@@ -28,6 +29,7 @@ FASTA format sequences of Nucleic Acids (`GCA_000027325.1_ASM2732v1_genomic.fna.
 ## Scripts
 
 The shell script `scripts/run.sh` automatically carries out the entire steps: creating subdirectories, downloading data files, and running the R script `scripts/my_analysis.R` that generates two output files (`analysis/plot.pdf` and `analysis/sequence.fasta`).
+The R script `scripts/my_sliding_window.R` generates sliding window plots of GC content, GC skew, and AT skew (`analysis/plot_sliding_window.pdf`).
 
 ## Usage
 

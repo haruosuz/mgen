@@ -1,6 +1,6 @@
 ----------
 
-Haruo Suzuki (haruo[at]g-language[dot]org)  
+Haruo Suzuki  
 Last Update: 2016-01-07  
 
 ----------

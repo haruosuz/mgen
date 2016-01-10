@@ -57,11 +57,6 @@ In the project's main directory `mgen/`, we run the shell script `scripts/run.sh
  - Using the assembly summary file: i.e. ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/Mycoplasma_genitalium/assembly_summary.txt
  - The field named "ftp_path" provides the path to the FTP directory containing the data for each assembly.
 
-- [SeqinR](http://pbil.univ-lyon1.fr/software/seqinr/home?lang=eng)
- - [Using the R SeqinR package](http://davetang.org/muse/2013/05/09/using-the-r-seqinr-package/)
- - [Welcome to a Little Book of R for Bioinformatics!](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html)
- - [Applied Statistics for Bioinformatics using R](https://cran.r-project.org/doc/contrib/Krijnen-IntroBioInfStatistics.pdf)
-
 - Genomic nucleotide composition
  - [Database of genomic compositional skews](http://www.g-language.org/data/oriter/)
  - [Trends Microbiol. 2001 Jul;9(7):335-43. Detecting anomalous gene clusters and pathogenicity islands in diverse bacterial genomes.](http://www.ncbi.nlm.nih.gov/pubmed/11435108)

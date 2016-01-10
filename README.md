@@ -1,14 +1,15 @@
 ----------
 
 Haruo Suzuki  
-Last Update: 2016-01-07  
+Last Update: 2016-01-08  
 
 ----------
 
 # *Mycoplasma genitalium* (mgen) Project
 Project started 2015-11-15.  
 
-A complete genome of *Mycoplasma genitalium* G37 was retrieved from the NCBI FTP site. We use R to assess genome features (length, base composition, GC content of the DNA sequence, and local variation in GC content).
+A complete genome of *Mycoplasma genitalium* G37 was retrieved from the NCBI FTP site.
+R language was used to assess genome features (length, base composition, and GC content of the DNA sequence, and local variation in GC content and skew).
 
 ## Project directories
 
@@ -22,18 +23,19 @@ A complete genome of *Mycoplasma genitalium* G37 was retrieved from the NCBI FTP
 
 FASTA format sequences of Nucleic Acids (`GCA_000027325.1_ASM2732v1_genomic.fna.gz`) and Amino Acids (`GCA_000027325.1_ASM2732v1_protein.faa.gz`) downloaded on 2015-12-03 from <ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA_000027325.1_ASM2732v1/> into `data/`:
 
-	# MD5 Checksums
-	MD5 (data/GCA_000027325.1_ASM2732v1_genomic.fna.gz) = a3e6e5655e4996dc2d49f876be9d1c27
-	MD5 (data/GCA_000027325.1_ASM2732v1_protein.faa.gz) = c8b83afee0016c2884b7a88bc1a9ac33
+    # MD5 Checksums
+    MD5 (data/GCA_000027325.1_ASM2732v1_genomic.fna.gz) = a3e6e5655e4996dc2d49f876be9d1c27
+    MD5 (data/GCA_000027325.1_ASM2732v1_protein.faa.gz) = c8b83afee0016c2884b7a88bc1a9ac33
 
 ## Scripts
 
-The shell script `scripts/run.sh` automatically carries out the entire steps: creating subdirectories, downloading data files, and running the R script `scripts/my_analysis.R` that generates two output files (`analysis/plot.pdf` and `analysis/sequence.fasta`).
-The R script `scripts/my_sliding_window.R` generates sliding window plots of GC content, GC skew, and AT skew (`analysis/plot_sliding_window.pdf`).
+The shell script `scripts/run.sh` automatically carries out the entire steps: creating subdirectories, downloading data files, and running the R scripts 
+`scripts/my_analysis.R` that calculates length and base composition of a DNA sequence, and 
+`scripts/my_sliding_window.R` that generates sliding window plots of GC content and GC skew (`analysis/plot_sliding_window.pdf`).
 
 ## Usage
 
-In the `mgen/` directory, we run the shell script `scripts/run.sh` with:
+In the project's main directory `mgen/`, we run the shell script `scripts/run.sh` with:
 
     bash scripts/run.sh > log.txt 2>&1 &
 
@@ -43,7 +45,6 @@ In the `mgen/` directory, we run the shell script `scripts/run.sh` with:
 
     cd data/
     ls -lh
-
     # Working with Gzipped Compressed Files using gzcat, zgrep, and zless
     gzcat *.fna.gz | head -n 2
     zgrep -c '^>' *.gz
@@ -64,7 +65,5 @@ In the `mgen/` directory, we run the shell script `scripts/run.sh` with:
 - Genomic nucleotide composition
  - [Database of genomic compositional skews](http://www.g-language.org/data/oriter/)
  - [Trends Microbiol. 2001 Jul;9(7):335-43. Detecting anomalous gene clusters and pathogenicity islands in diverse bacterial genomes.](http://www.ncbi.nlm.nih.gov/pubmed/11435108)
- - [Genome Res. 2001 Apr;11(4):540-6. Genome-scale compositional comparisons in eukaryotes.](http://www.ncbi.nlm.nih.gov/pubmed/11282969) [Table 1](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC311039/table/T1/)
- - [Proc Natl Acad Sci U S A. 1999 Aug 3;96(16):9184-9. Genome signature comparisons among prokaryote, plasmid, and mitochondrial DNA.](http://www.ncbi.nlm.nih.gov/pubmed/10430917) [Figure 1](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC17754/figure/F1/)
 
 ----------

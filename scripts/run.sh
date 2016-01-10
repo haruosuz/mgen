@@ -6,7 +6,7 @@ mkdir -p ./{data/$(date +%F),analysis/$(date +%F)}
 
 # Downloading data
 URL=ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA_000027325.1_ASM2732v1
-wget -P data/ $URL/{README.txt,md5checksums.txt,*.fna.gz,*.faa.gz}
+wget -nv -P data/ $URL/{README.txt,md5checksums.txt,*.fna.gz,*.faa.gz}
 
 echo "MD5 Checksums"
 md5 data/*.gz

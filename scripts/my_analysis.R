@@ -1,3 +1,4 @@
+cat("\n  This R script calculates length and base composition of a DNA sequence.\n\n")
 
 # Set Working Directory
 #setwd("~/projects/mgen/")

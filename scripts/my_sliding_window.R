@@ -1,3 +1,4 @@
+cat("\n  This R script generates sliding window plots of GC content and GC skew.\n\n")
 
 # Set Working Directory
 #setwd("~/projects/mgen/")

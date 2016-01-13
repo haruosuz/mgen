@@ -1,5 +1,7 @@
 #!/bin/bash
-set -euo pipefail
+set -e
+set -u
+set -o pipefail
 
 # Creating directories
 mkdir -p ./{data/$(date +%F),analysis/$(date +%F)}

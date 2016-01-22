@@ -1,7 +1,7 @@
 ----------
 
 Haruo Suzuki  
-Last Update: 2016-01-08  
+Last Update: 2016-01-22  
 
 ----------
 
@@ -21,11 +21,11 @@ R language was used to assess genome features (length, base composition, and GC 
 
 ## Data
 
-FASTA format sequences of Nucleic Acids (`GCA_000027325.1_ASM2732v1_genomic.fna.gz`) and Amino Acids (`GCA_000027325.1_ASM2732v1_protein.faa.gz`) downloaded on 2015-12-03 from <ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA_000027325.1_ASM2732v1/> into `data/`:
+FASTA format sequences of Nucleic Acids (`GCF_000027325.1_ASM2732v1_genomic.fna.gz`) and Amino Acids (`GCF_000027325.1_ASM2732v1_protein.faa.gz`) downloaded on 2016-01-22 from <ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF_000027325.1_ASM2732v1/> into `data/`:
 
     # MD5 Checksums
-    MD5 (data/GCA_000027325.1_ASM2732v1_genomic.fna.gz) = a3e6e5655e4996dc2d49f876be9d1c27
-    MD5 (data/GCA_000027325.1_ASM2732v1_protein.faa.gz) = c8b83afee0016c2884b7a88bc1a9ac33
+    MD5 (data/GCF_000027325.1_ASM2732v1_genomic.fna.gz) = 456f609c24abab75d4d593b5c92bd631
+    MD5 (data/GCF_000027325.1_ASM2732v1_protein.faa.gz) = 02805a93d8dc783967e0a8fdb4511af5
 
 ## Scripts
 
@@ -37,8 +37,6 @@ Let's run the driver script in the project's main directory `mgen/` with:
 
     bash scripts/run.sh > log.txt 2>&1 &
 
-----------
-
 ## Inspecting Data
 
     cd data/
@@ -47,6 +45,28 @@ Let's run the driver script in the project's main directory `mgen/` with:
     gzcat *.fna.gz | head -n 2
     zgrep -c '^>' *.gz
     zless *.faa.gz
+
+## Steps
+
+- 2016-01-22  
+ -
+ -
+
+- 2016-01-11  
+ - Created the R script `scripts/my_sliding_window.R`
+
+- 2015-11-15  
+ - Created the project directory
+
+        mkdir -p mgen/{data,scripts,analysis}
+
+ - Downloaded data
+
+        Genus_Species_Strain="Mycoplasma_genitalium_G37"
+        wget -b -P data/ -nd -cNr -t 45 -A "*.faa,*.fna" "ftp://ftp.ncbi.nlm.nih.gov/genomes/Bacteria/${
+Genus_Species_Strain}*"
+
+ - Created the shell script `scripts/run.sh` and R script `scripts/my_analysis.R` 
 
 ----------
 

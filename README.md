@@ -49,23 +49,17 @@ Let's run the driver script in the project's main directory `mgen/` with:
 ## Steps
 
 - 2016-01-22  
- -
- -
+ - Downloaded data from <ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF_000027325.1_ASM2732v1/>
 
 - 2016-01-11  
  - Created the R script `scripts/my_sliding_window.R`
 
+- 2015-12-04  
+ - Downloaded data from <ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA_000027325.1_ASM2732v1/>
+
 - 2015-11-15  
- - Created the project directory
-
-        mkdir -p mgen/{data,scripts,analysis}
-
- - Downloaded data
-
-        Genus_Species_Strain="Mycoplasma_genitalium_G37"
-        wget -b -P data/ -nd -cNr -t 45 -A "*.faa,*.fna" "ftp://ftp.ncbi.nlm.nih.gov/genomes/Bacteria/${
-Genus_Species_Strain}*"
-
+ - Created the project directory using `mkdir -p mgen/{data,scripts,analysis}`
+ - Downloaded data from <ftp://ftp.ncbi.nlm.nih.gov/genomes/Bacteria/>
  - Created the shell script `scripts/run.sh` and R script `scripts/my_analysis.R` 
 
 ----------

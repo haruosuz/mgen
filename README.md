@@ -46,7 +46,7 @@ Let's run the driver script in the project's main directory `mgen/` with:
     zgrep -c '^>' *.gz
     zless *.faa.gz
 
-## Steps
+## Updates
 
 - 2016-01-22  
  - Downloaded data from <ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF_000027325.1_ASM2732v1/>

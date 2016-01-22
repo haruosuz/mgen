@@ -1,13 +1,16 @@
 cat("\n  This R script calculates length and base composition of a DNA sequence.\n\n")
 
-# Set Working Directory
-#setwd("~/projects/mgen/")
-
 # Loading seqinr package
 library(seqinr)
 
+# Set Working Directory
+#setwd("~/projects/mgen/")
+
+# List files in a directory
+files <- list.files(path="data", pattern="genomic.fna.gz", full.names=TRUE)
+
 # Reading sequence data into R
-lna <- read.fasta(file = "data/GCA_000027325.1_ASM2732v1_genomic.fna.gz")
+lna <- read.fasta(file = files[1], seqtype = c("DNA"))
 
 cat("# How many sequences\n")
 length(lna)

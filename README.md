@@ -31,11 +31,9 @@ FASTA format sequences of Nucleic Acids (`GCA_000027325.1_ASM2732v1_genomic.fna.
 
 The shell script `scripts/run.sh` automatically carries out the entire steps: creating subdirectories, downloading data files, and running the R scripts 
 `scripts/my_analysis.R` that calculates length and base composition of a DNA sequence, and 
-`scripts/my_sliding_window.R` that generates sliding window plots of GC content and GC skew (`analysis/plot_sliding_window.pdf`).
+`scripts/my_sliding_window.R` that generates sliding window plots of GC content and GC skew (`analysis/Rplots_sliding_window.pdf`).
 
-## Usage
-
-In the project's main directory `mgen/`, we run the shell script `scripts/run.sh` with:
+Let's run the driver script in the project's main directory `mgen/` with:
 
     bash scripts/run.sh > log.txt 2>&1 &
 

@@ -1,7 +1,7 @@
 ----------
 
 Haruo Suzuki  
-Last Update: 2016-01-22  
+Last Update: 2016-03-22  
 
 ----------
 
@@ -65,9 +65,12 @@ Let's run the driver script in the project's main directory `mgen/` with:
 ----------
 
 ## References
-- [Genomes Download FAQ | 12. How can I download RefSeq data for all complete bacterial genomes?](http://www.ncbi.nlm.nih.gov/genome/doc/ftpfaq/#allcomplete)
- - Using the assembly summary file: i.e. ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/Mycoplasma_genitalium/assembly_summary.txt
- - The field named "ftp_path" provides the path to the FTP directory containing the data for each assembly.
+- Genomes Download FAQ
+ - [9. How can I find the sequence and annotation of my genome of interest?](http://www.ncbi.nlm.nih.gov/genome/doc/ftpfaq/#howtofind)
+  - Using the assembly summary file
+   - assembly summary files for bacteria under [genbank](ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/assembly_summary.txt) or [refseq](ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/assembly_summary.txt)
+   - assembly summary files for a species under [genbank](ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/Mycoplasma_genitalium/assembly_summary.txt) or [refseq](ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/Mycoplasma_genitalium/assembly_summary.txt)
+ - [12. How can I download RefSeq data for all complete bacterial genomes?](http://www.ncbi.nlm.nih.gov/genome/doc/ftpfaq/#allcomplete)
 
 - Genomic nucleotide composition
  - [Database of genomic compositional skews](http://www.g-language.org/data/oriter/)

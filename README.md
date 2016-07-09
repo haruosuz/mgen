@@ -66,15 +66,16 @@ Let's run the driver script in the project's main directory `mgen/` with:
 
 ## References
 - Genomes Download FAQ
-  - [9. How can I find the sequence and annotation of my genome of interest?](http://www.ncbi.nlm.nih.gov/genome/doc/ftpfaq/#howtofind) Using the assembly summary files for bacteria or a species under genbank or refseq
-    - ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/assembly_summary.txt
-    - ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/assembly_summary.txt
-    - ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/Mycoplasma_genitalium/assembly_summary.txt
-    - ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/Mycoplasma_genitalium/assembly_summary.txt
  - [12. How can I download RefSeq data for all complete bacterial genomes?](http://www.ncbi.nlm.nih.gov/genome/doc/ftpfaq/#allcomplete)
+ - [9. How can I find the sequence and annotation of my genome of interest?](http://www.ncbi.nlm.nih.gov/genome/doc/ftpfaq/#howtofind) Using the assembly summary files for bacteria or a species under genbank or refseq
+  - ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/assembly_summary.txt
+  - ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/assembly_summary.txt
+  - ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/Mycoplasma_genitalium/assembly_summary.txt
+  - ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/Mycoplasma_genitalium/assembly_summary.txt
 
 - Genomic nucleotide composition
  - [Database of genomic compositional skews](http://www.g-language.org/data/oriter/)
  - [Trends Microbiol. 2001 Jul;9(7):335-43. Detecting anomalous gene clusters and pathogenicity islands in diverse bacterial genomes.](http://www.ncbi.nlm.nih.gov/pubmed/11435108)
+ - [Proc Natl Acad Sci U S A. 1999 Aug 3;96(16):9184-9. Genome signature comparisons among prokaryote, plasmid, and mitochondrial DNA.](http://www.ncbi.nlm.nih.gov/pubmed/10430917)
 
 ----------
